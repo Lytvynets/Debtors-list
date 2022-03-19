@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445C59EFF14BE9C56C74CFDE /* Pods_Debtors_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8075E9F3AB34BDA886A15 /* Pods_Debtors_list.framework */; };
+		F58DA02A27E4A92E00D7739B /* Data Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58DA02927E4A92E00D7739B /* Data Manager.swift */; };
+		F58DA02D27E4D89F00D7739B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58DA02C27E4D89E00D7739B /* Keys.swift */; };
+		F5E45C9227E49EC500C75FA0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9127E49EC500C75FA0 /* TableViewCell.swift */; };
+		F5E45C9427E49F2300C75FA0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9327E49F2300C75FA0 /* Model.swift */; };
+		F5E45C9627E49F4B00C75FA0 /* Image User defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9527E49F4B00C75FA0 /* Image User defaults.swift */; };
+		F5E45C9927E49FDC00C75FA0 /* ProfileInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9827E49FDC00C75FA0 /* ProfileInfoModel.swift */; };
+		F5E45C9B27E4A01100C75FA0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9A27E4A01100C75FA0 /* SettingsVC.swift */; };
+		F5E45C9D27E4A04900C75FA0 /* CurrencySettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9C27E4A04900C75FA0 /* CurrencySettingsVC.swift */; };
+		F5E45C9F27E4A0C800C75FA0 /* YourNewDebtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9E27E4A0C800C75FA0 /* YourNewDebtVC.swift */; };
+		F5E45CA127E4A12200C75FA0 /* YourDebtListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA027E4A12200C75FA0 /* YourDebtListTableVC.swift */; };
+		F5E45CA327E4A14D00C75FA0 /* DebtorsListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA227E4A14D00C75FA0 /* DebtorsListTableVC.swift */; };
+		F5E45CA527E4A16C00C75FA0 /* NewDebtorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA427E4A16C00C75FA0 /* NewDebtorVC.swift */; };
+		F5E45CA727E4A1E000C75FA0 /* YourDebtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA627E4A1E000C75FA0 /* YourDebtModel.swift */; };
+		F5E45CA927E4A22100C75FA0 /* YouDebtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA827E4A22100C75FA0 /* YouDebtTableViewCell.swift */; };
 		F5F5237527E3A28600FAF539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237427E3A28600FAF539 /* AppDelegate.swift */; };
 		F5F5237727E3A28600FAF539 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237627E3A28600FAF539 /* SceneDelegate.swift */; };
-		F5F5237927E3A28600FAF539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237827E3A28600FAF539 /* ViewController.swift */; };
+		F5F5237927E3A28600FAF539 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237827E3A28600FAF539 /* ProfileViewController.swift */; };
 		F5F5237C27E3A28600FAF539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237A27E3A28600FAF539 /* Main.storyboard */; };
 		F5F5237E27E3A28800FAF539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237D27E3A28800FAF539 /* Assets.xcassets */; };
 		F5F5238127E3A28800FAF539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */; };
@@ -37,10 +52,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9CF8075E9F3AB34BDA886A15 /* Pods_Debtors_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Debtors_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED15456EA1FCCE10B8F1C38 /* Pods-Debtors-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debtors-list.release.xcconfig"; path = "Target Support Files/Pods-Debtors-list/Pods-Debtors-list.release.xcconfig"; sourceTree = "<group>"; };
+		F58DA02927E4A92E00D7739B /* Data Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Manager.swift"; sourceTree = "<group>"; };
+		F58DA02C27E4D89E00D7739B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		F5E45C9127E49EC500C75FA0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F5E45C9327E49F2300C75FA0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F5E45C9527E49F4B00C75FA0 /* Image User defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image User defaults.swift"; sourceTree = "<group>"; };
+		F5E45C9827E49FDC00C75FA0 /* ProfileInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoModel.swift; sourceTree = "<group>"; };
+		F5E45C9A27E4A01100C75FA0 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		F5E45C9C27E4A04900C75FA0 /* CurrencySettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingsVC.swift; sourceTree = "<group>"; };
+		F5E45C9E27E4A0C800C75FA0 /* YourNewDebtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourNewDebtVC.swift; sourceTree = "<group>"; };
+		F5E45CA027E4A12200C75FA0 /* YourDebtListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDebtListTableVC.swift; sourceTree = "<group>"; };
+		F5E45CA227E4A14D00C75FA0 /* DebtorsListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsListTableVC.swift; sourceTree = "<group>"; };
+		F5E45CA427E4A16C00C75FA0 /* NewDebtorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDebtorVC.swift; sourceTree = "<group>"; };
+		F5E45CA627E4A1E000C75FA0 /* YourDebtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDebtModel.swift; sourceTree = "<group>"; };
+		F5E45CA827E4A22100C75FA0 /* YouDebtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouDebtTableViewCell.swift; sourceTree = "<group>"; };
 		F5F5237127E3A28600FAF539 /* Debtors-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debtors-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F5237427E3A28600FAF539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F5237627E3A28600FAF539 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5F5237827E3A28600FAF539 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5F5237827E3A28600FAF539 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F5F5237B27E3A28600FAF539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5F5237D27E3A28800FAF539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F5238027E3A28800FAF539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +82,7 @@
 		F5F5239527E3A28800FAF539 /* Debtors_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtors_listUITests.swift; sourceTree = "<group>"; };
 		F5F5239727E3A28800FAF539 /* Debtors_listUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtors_listUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F5F523A627E3A3EB00FAF539 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FC191706B94749FFFFD46530 /* Pods-Debtors-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debtors-list.debug.xcconfig"; path = "Target Support Files/Pods-Debtors-list/Pods-Debtors-list.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				445C59EFF14BE9C56C74CFDE /* Pods_Debtors_list.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +111,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24CD7DE817582474CB465978 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CF8075E9F3AB34BDA886A15 /* Pods_Debtors_list.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77DE4BEA8158B67BF206C251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC191706B94749FFFFD46530 /* Pods-Debtors-list.debug.xcconfig */,
+				DED15456EA1FCCE10B8F1C38 /* Pods-Debtors-list.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F58DA02B27E4D47F00D7739B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5E45C9827E49FDC00C75FA0 /* ProfileInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5E45C8C27E49CC700C75FA0 /* Profile screan */ = {
+			isa = PBXGroup;
+			children = (
+				F5F5237827E3A28600FAF539 /* ProfileViewController.swift */,
+				F58DA02B27E4D47F00D7739B /* Model */,
+			);
+			path = "Profile screan";
+			sourceTree = "<group>";
+		};
+		F5E45C8D27E49CE900C75FA0 /* Settings screan */ = {
+			isa = PBXGroup;
+			children = (
+				F5E45C9A27E4A01100C75FA0 /* SettingsVC.swift */,
+				F5E45C9C27E4A04900C75FA0 /* CurrencySettingsVC.swift */,
+			);
+			path = "Settings screan";
+			sourceTree = "<group>";
+		};
+		F5E45C8E27E49D1C00C75FA0 /* Add debtor screan */ = {
+			isa = PBXGroup;
+			children = (
+				F5E45CA427E4A16C00C75FA0 /* NewDebtorVC.swift */,
+				F5E45CA227E4A14D00C75FA0 /* DebtorsListTableVC.swift */,
+				F5E45C9327E49F2300C75FA0 /* Model.swift */,
+				F5E45C9127E49EC500C75FA0 /* TableViewCell.swift */,
+			);
+			path = "Add debtor screan";
+			sourceTree = "<group>";
+		};
+		F5E45C8F27E49D5200C75FA0 /* Add debt screan */ = {
+			isa = PBXGroup;
+			children = (
+				F5E45C9E27E4A0C800C75FA0 /* YourNewDebtVC.swift */,
+				F5E45CA027E4A12200C75FA0 /* YourDebtListTableVC.swift */,
+				F5E45CA627E4A1E000C75FA0 /* YourDebtModel.swift */,
+				F5E45CA827E4A22100C75FA0 /* YouDebtTableViewCell.swift */,
+			);
+			path = "Add debt screan";
+			sourceTree = "<group>";
+		};
+		F5E45C9027E49D8C00C75FA0 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				F5E45C9527E49F4B00C75FA0 /* Image User defaults.swift */,
+				F58DA02927E4A92E00D7739B /* Data Manager.swift */,
+				F58DA02C27E4D89E00D7739B /* Keys.swift */,
+				F5F5237427E3A28600FAF539 /* AppDelegate.swift */,
+				F5F5237627E3A28600FAF539 /* SceneDelegate.swift */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
 		F5F5236827E3A28600FAF539 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +196,8 @@
 				F5F5238A27E3A28800FAF539 /* Debtors-listTests */,
 				F5F5239427E3A28800FAF539 /* Debtors-listUITests */,
 				F5F5237227E3A28600FAF539 /* Products */,
+				77DE4BEA8158B67BF206C251 /* Pods */,
+				24CD7DE817582474CB465978 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +214,11 @@
 		F5F5237327E3A28600FAF539 /* Debtors-list */ = {
 			isa = PBXGroup;
 			children = (
-				F5F5237427E3A28600FAF539 /* AppDelegate.swift */,
-				F5F5237627E3A28600FAF539 /* SceneDelegate.swift */,
-				F5F5237827E3A28600FAF539 /* ViewController.swift */,
+				F5E45C8C27E49CC700C75FA0 /* Profile screan */,
+				F5E45C8D27E49CE900C75FA0 /* Settings screan */,
+				F5E45C8F27E49D5200C75FA0 /* Add debt screan */,
+				F5E45C8E27E49D1C00C75FA0 /* Add debtor screan */,
+				F5E45C9027E49D8C00C75FA0 /* Support files */,
 				F5F5237A27E3A28600FAF539 /* Main.storyboard */,
 				F5F5237D27E3A28800FAF539 /* Assets.xcassets */,
 				F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */,
@@ -137,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5F5239B27E3A28800FAF539 /* Build configuration list for PBXNativeTarget "Debtors-list" */;
 			buildPhases = (
+				80D892EAD157C2B8FEF12683 /* [CP] Check Pods Manifest.lock */,
 				F5F5236D27E3A28600FAF539 /* Sources */,
 				F5F5236E27E3A28600FAF539 /* Frameworks */,
 				F5F5236F27E3A28600FAF539 /* Resources */,
+				6CC7CCE244C62BA164A02765 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,14 +373,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CC7CCE244C62BA164A02765 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Debtors-list/Pods-Debtors-list-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Debtors-list/Pods-Debtors-list-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Debtors-list/Pods-Debtors-list-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80D892EAD157C2B8FEF12683 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Debtors-list-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5F5236D27E3A28600FAF539 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F5237927E3A28600FAF539 /* ViewController.swift in Sources */,
+				F5E45C9427E49F2300C75FA0 /* Model.swift in Sources */,
+				F58DA02D27E4D89F00D7739B /* Keys.swift in Sources */,
+				F5E45C9D27E4A04900C75FA0 /* CurrencySettingsVC.swift in Sources */,
+				F58DA02A27E4A92E00D7739B /* Data Manager.swift in Sources */,
+				F5E45C9F27E4A0C800C75FA0 /* YourNewDebtVC.swift in Sources */,
+				F5F5237927E3A28600FAF539 /* ProfileViewController.swift in Sources */,
+				F5E45C9927E49FDC00C75FA0 /* ProfileInfoModel.swift in Sources */,
+				F5E45CA727E4A1E000C75FA0 /* YourDebtModel.swift in Sources */,
+				F5E45C9627E49F4B00C75FA0 /* Image User defaults.swift in Sources */,
+				F5E45C9227E49EC500C75FA0 /* TableViewCell.swift in Sources */,
+				F5E45CA327E4A14D00C75FA0 /* DebtorsListTableVC.swift in Sources */,
 				F5F5237527E3A28600FAF539 /* AppDelegate.swift in Sources */,
 				F5F5237727E3A28600FAF539 /* SceneDelegate.swift in Sources */,
+				F5E45CA927E4A22100C75FA0 /* YouDebtTableViewCell.swift in Sources */,
+				F5E45CA527E4A16C00C75FA0 /* NewDebtorVC.swift in Sources */,
+				F5E45CA127E4A12200C75FA0 /* YourDebtListTableVC.swift in Sources */,
+				F5E45C9B27E4A01100C75FA0 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +610,7 @@
 		};
 		F5F5239C27E3A28800FAF539 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC191706B94749FFFFD46530 /* Pods-Debtors-list.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +639,7 @@
 		};
 		F5F5239D27E3A28800FAF539 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DED15456EA1FCCE10B8F1C38 /* Pods-Debtors-list.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
