@@ -5,7 +5,7 @@ This application helps to record people and their money debt. This app is useful
 
 You'll need [CocoaPods](http://cocoapods.org) installed for of our dependencies.
     
-    $ gem install cocoapods
+    $ sudo gem install cocoapods
     
 Now you'll need to build the dependencies.
     
