@@ -15,6 +15,11 @@ Now you'll need to build the dependencies.
 ## Third-party Libraries
 * [Realm](https://realm.io/)
 
+## Screenshots 
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors1.png)
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors2.png)
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors3.png)
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors4.png)
  
 ## Past versions
 
