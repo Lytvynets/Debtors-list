@@ -7,24 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189AC57F29622B1400020293 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AC57E29622B1400020293 /* Notifications.swift */; };
+		18A183D829630D8600513904 /* NotificationsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A183D729630D8600513904 /* NotificationsSettings.swift */; };
+		18AF2EA629526E1300CB2388 /* CustomizeShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF2EA529526E1200CB2388 /* CustomizeShadows.swift */; };
+		18BA7E1429658B82006408A0 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA7E1329658B82006408A0 /* SettingsTableView.swift */; };
+		18CBF6A4293E6FB100D4DC26 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6A3293E6FB100D4DC26 /* TabBar.swift */; };
+		18CBF6A6293E6FE700D4DC26 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6A5293E6FE700D4DC26 /* MainScreen.swift */; };
+		18CBF6A8293E701100D4DC26 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6A7293E701100D4DC26 /* MainTableView.swift */; };
+		18CBF6AA293E705400D4DC26 /* CustomizeСells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6A9293E705400D4DC26 /* CustomizeСells.swift */; };
+		18CBF6AC293E706000D4DC26 /* DataCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6AB293E706000D4DC26 /* DataCells.swift */; };
+		18CBF6AE293E706E00D4DC26 /* SetColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6AD293E706E00D4DC26 /* SetColors.swift */; };
+		18CBF6B0293E707800D4DC26 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6AF293E707800D4DC26 /* DarkTheme.swift */; };
+		18CBF6B2293E708200D4DC26 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6B1293E708200D4DC26 /* LightTheme.swift */; };
+		18CBF6B4293E70F100D4DC26 /* DebtorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6B3293E70F100D4DC26 /* DebtorCell.swift */; };
+		18CBF6B6293E710A00D4DC26 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6B5293E710A00D4DC26 /* SettingsCell.swift */; };
+		18CBF6B8293E713E00D4DC26 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6B7293E713E00D4DC26 /* Settings.swift */; };
+		18CBF6BA293E716200D4DC26 /* DebtorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6B9293E716200D4DC26 /* DebtorsList.swift */; };
+		18CBF6BC293E718800D4DC26 /* DebtList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6BB293E718800D4DC26 /* DebtList.swift */; };
+		18CBF6BF293E71C700D4DC26 /* AddNewDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6BE293E71C700D4DC26 /* AddNewDebt.swift */; };
+		18CBF6C1293E71DF00D4DC26 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6C0293E71DF00D4DC26 /* Currency.swift */; };
+		18DCECFF29433C120092E30B /* LabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DCECFE29433C120092E30B /* LabelBuilder.swift */; };
+		18F926342941E8A700DF0CBE /* MainScreenLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F926332941E8A700DF0CBE /* MainScreenLayout.swift */; };
 		445C59EFF14BE9C56C74CFDE /* Pods_Debtors_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8075E9F3AB34BDA886A15 /* Pods_Debtors_list.framework */; };
 		F58DA02A27E4A92E00D7739B /* Data Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58DA02927E4A92E00D7739B /* Data Manager.swift */; };
-		F58DA02D27E4D89F00D7739B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58DA02C27E4D89E00D7739B /* Keys.swift */; };
-		F5E45C9227E49EC500C75FA0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9127E49EC500C75FA0 /* TableViewCell.swift */; };
 		F5E45C9427E49F2300C75FA0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9327E49F2300C75FA0 /* Model.swift */; };
-		F5E45C9627E49F4B00C75FA0 /* Image User defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9527E49F4B00C75FA0 /* Image User defaults.swift */; };
-		F5E45C9927E49FDC00C75FA0 /* ProfileInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9827E49FDC00C75FA0 /* ProfileInfoModel.swift */; };
-		F5E45C9B27E4A01100C75FA0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9A27E4A01100C75FA0 /* SettingsVC.swift */; };
-		F5E45C9D27E4A04900C75FA0 /* CurrencySettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9C27E4A04900C75FA0 /* CurrencySettingsVC.swift */; };
-		F5E45C9F27E4A0C800C75FA0 /* YourNewDebtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9E27E4A0C800C75FA0 /* YourNewDebtVC.swift */; };
-		F5E45CA127E4A12200C75FA0 /* YourDebtListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA027E4A12200C75FA0 /* YourDebtListTableVC.swift */; };
-		F5E45CA327E4A14D00C75FA0 /* DebtorsListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA227E4A14D00C75FA0 /* DebtorsListTableVC.swift */; };
-		F5E45CA527E4A16C00C75FA0 /* NewDebtorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA427E4A16C00C75FA0 /* NewDebtorVC.swift */; };
-		F5E45CA727E4A1E000C75FA0 /* YourDebtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA627E4A1E000C75FA0 /* YourDebtModel.swift */; };
-		F5E45CA927E4A22100C75FA0 /* YouDebtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA827E4A22100C75FA0 /* YouDebtTableViewCell.swift */; };
+		F5E45CA727E4A1E000C75FA0 /* Debtors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA627E4A1E000C75FA0 /* Debtors.swift */; };
 		F5F5237527E3A28600FAF539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237427E3A28600FAF539 /* AppDelegate.swift */; };
 		F5F5237727E3A28600FAF539 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237627E3A28600FAF539 /* SceneDelegate.swift */; };
-		F5F5237927E3A28600FAF539 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237827E3A28600FAF539 /* ProfileViewController.swift */; };
 		F5F5237C27E3A28600FAF539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237A27E3A28600FAF539 /* Main.storyboard */; };
 		F5F5237E27E3A28800FAF539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237D27E3A28800FAF539 /* Assets.xcassets */; };
 		F5F5238127E3A28800FAF539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */; };
@@ -52,26 +61,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189AC57E29622B1400020293 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		18A183D729630D8600513904 /* NotificationsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSettings.swift; sourceTree = "<group>"; };
+		18AF2EA529526E1200CB2388 /* CustomizeShadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeShadows.swift; sourceTree = "<group>"; };
+		18BA7E1329658B82006408A0 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		18CBF6A3293E6FB100D4DC26 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		18CBF6A5293E6FE700D4DC26 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		18CBF6A7293E701100D4DC26 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		18CBF6A9293E705400D4DC26 /* CustomizeСells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomizeСells.swift"; sourceTree = "<group>"; };
+		18CBF6AB293E706000D4DC26 /* DataCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCells.swift; sourceTree = "<group>"; };
+		18CBF6AD293E706E00D4DC26 /* SetColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColors.swift; sourceTree = "<group>"; };
+		18CBF6AF293E707800D4DC26 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		18CBF6B1293E708200D4DC26 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		18CBF6B3293E70F100D4DC26 /* DebtorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorCell.swift; sourceTree = "<group>"; };
+		18CBF6B5293E710A00D4DC26 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		18CBF6B7293E713E00D4DC26 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		18CBF6B9293E716200D4DC26 /* DebtorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsList.swift; sourceTree = "<group>"; };
+		18CBF6BB293E718800D4DC26 /* DebtList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtList.swift; sourceTree = "<group>"; };
+		18CBF6BE293E71C700D4DC26 /* AddNewDebt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDebt.swift; sourceTree = "<group>"; };
+		18CBF6C0293E71DF00D4DC26 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		18DCECFE29433C120092E30B /* LabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBuilder.swift; sourceTree = "<group>"; };
+		18F926332941E8A700DF0CBE /* MainScreenLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenLayout.swift; sourceTree = "<group>"; };
 		9CF8075E9F3AB34BDA886A15 /* Pods_Debtors_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Debtors_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED15456EA1FCCE10B8F1C38 /* Pods-Debtors-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debtors-list.release.xcconfig"; path = "Target Support Files/Pods-Debtors-list/Pods-Debtors-list.release.xcconfig"; sourceTree = "<group>"; };
 		F58DA02927E4A92E00D7739B /* Data Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Manager.swift"; sourceTree = "<group>"; };
-		F58DA02C27E4D89E00D7739B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		F5E45C9127E49EC500C75FA0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F5E45C9327E49F2300C75FA0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		F5E45C9527E49F4B00C75FA0 /* Image User defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image User defaults.swift"; sourceTree = "<group>"; };
-		F5E45C9827E49FDC00C75FA0 /* ProfileInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoModel.swift; sourceTree = "<group>"; };
-		F5E45C9A27E4A01100C75FA0 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		F5E45C9C27E4A04900C75FA0 /* CurrencySettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingsVC.swift; sourceTree = "<group>"; };
-		F5E45C9E27E4A0C800C75FA0 /* YourNewDebtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourNewDebtVC.swift; sourceTree = "<group>"; };
-		F5E45CA027E4A12200C75FA0 /* YourDebtListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDebtListTableVC.swift; sourceTree = "<group>"; };
-		F5E45CA227E4A14D00C75FA0 /* DebtorsListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsListTableVC.swift; sourceTree = "<group>"; };
-		F5E45CA427E4A16C00C75FA0 /* NewDebtorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDebtorVC.swift; sourceTree = "<group>"; };
-		F5E45CA627E4A1E000C75FA0 /* YourDebtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDebtModel.swift; sourceTree = "<group>"; };
-		F5E45CA827E4A22100C75FA0 /* YouDebtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouDebtTableViewCell.swift; sourceTree = "<group>"; };
+		F5E45CA627E4A1E000C75FA0 /* Debtors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtors.swift; sourceTree = "<group>"; };
 		F5F5237127E3A28600FAF539 /* Debtors-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debtors-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F5237427E3A28600FAF539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F5237627E3A28600FAF539 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5F5237827E3A28600FAF539 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F5F5237B27E3A28600FAF539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5F5237D27E3A28800FAF539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F5238027E3A28800FAF539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,6 +129,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18CBF6A2293E6F7F00D4DC26 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				18CBF6A3293E6FB100D4DC26 /* TabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		18CBF6BD293E71B300D4DC26 /* DebtAdditionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				18CBF6BE293E71C700D4DC26 /* AddNewDebt.swift */,
+				18CBF6C0293E71DF00D4DC26 /* Currency.swift */,
+			);
+			path = DebtAdditionScreen;
+			sourceTree = "<group>";
+		};
+		18E428A1293F64F500DA70B5 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				18CBF6AD293E706E00D4DC26 /* SetColors.swift */,
+				18CBF6AF293E707800D4DC26 /* DarkTheme.swift */,
+				18CBF6B1293E708200D4DC26 /* LightTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		18E428A2293F655300DA70B5 /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F5F5237427E3A28600FAF539 /* AppDelegate.swift */,
+				F5F5237627E3A28600FAF539 /* SceneDelegate.swift */,
+			);
+			path = SystemFiles;
+			sourceTree = "<group>";
+		};
+		18F926352941FCD000DF0CBE /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
 		24CD7DE817582474CB465978 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,59 +192,59 @@
 		F58DA02B27E4D47F00D7739B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F5E45C9827E49FDC00C75FA0 /* ProfileInfoModel.swift */,
+				18CBF6B3293E70F100D4DC26 /* DebtorCell.swift */,
+				18CBF6B5293E710A00D4DC26 /* SettingsCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F5E45C8C27E49CC700C75FA0 /* Profile screan */ = {
+		F5E45C8C27E49CC700C75FA0 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F5F5237827E3A28600FAF539 /* ProfileViewController.swift */,
-				F58DA02B27E4D47F00D7739B /* Model */,
+				18CBF6A5293E6FE700D4DC26 /* MainScreen.swift */,
+				18CBF6A7293E701100D4DC26 /* MainTableView.swift */,
+				18F926332941E8A700DF0CBE /* MainScreenLayout.swift */,
 			);
-			path = "Profile screan";
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		F5E45C8D27E49CE900C75FA0 /* Settings screan */ = {
 			isa = PBXGroup;
 			children = (
-				F5E45C9A27E4A01100C75FA0 /* SettingsVC.swift */,
-				F5E45C9C27E4A04900C75FA0 /* CurrencySettingsVC.swift */,
+				18CBF6B7293E713E00D4DC26 /* Settings.swift */,
+				18BA7E1329658B82006408A0 /* SettingsTableView.swift */,
+				18A183D729630D8600513904 /* NotificationsSettings.swift */,
 			);
 			path = "Settings screan";
 			sourceTree = "<group>";
 		};
-		F5E45C8E27E49D1C00C75FA0 /* Add debtor screan */ = {
+		F5E45C8E27E49D1C00C75FA0 /* DebtorsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F5E45CA427E4A16C00C75FA0 /* NewDebtorVC.swift */,
-				F5E45CA227E4A14D00C75FA0 /* DebtorsListTableVC.swift */,
 				F5E45C9327E49F2300C75FA0 /* Model.swift */,
-				F5E45C9127E49EC500C75FA0 /* TableViewCell.swift */,
+				18CBF6B9293E716200D4DC26 /* DebtorsList.swift */,
 			);
-			path = "Add debtor screan";
+			path = DebtorsScreen;
 			sourceTree = "<group>";
 		};
-		F5E45C8F27E49D5200C75FA0 /* Add debt screan */ = {
+		F5E45C8F27E49D5200C75FA0 /* DebtScreen  */ = {
 			isa = PBXGroup;
 			children = (
-				F5E45C9E27E4A0C800C75FA0 /* YourNewDebtVC.swift */,
-				F5E45CA027E4A12200C75FA0 /* YourDebtListTableVC.swift */,
-				F5E45CA627E4A1E000C75FA0 /* YourDebtModel.swift */,
-				F5E45CA827E4A22100C75FA0 /* YouDebtTableViewCell.swift */,
+				F5E45CA627E4A1E000C75FA0 /* Debtors.swift */,
+				18CBF6BB293E718800D4DC26 /* DebtList.swift */,
 			);
-			path = "Add debt screan";
+			path = "DebtScreen ";
 			sourceTree = "<group>";
 		};
 		F5E45C9027E49D8C00C75FA0 /* Support files */ = {
 			isa = PBXGroup;
 			children = (
-				F5E45C9527E49F4B00C75FA0 /* Image User defaults.swift */,
 				F58DA02927E4A92E00D7739B /* Data Manager.swift */,
-				F58DA02C27E4D89E00D7739B /* Keys.swift */,
-				F5F5237427E3A28600FAF539 /* AppDelegate.swift */,
-				F5F5237627E3A28600FAF539 /* SceneDelegate.swift */,
+				18CBF6A9293E705400D4DC26 /* CustomizeСells.swift */,
+				18CBF6AB293E706000D4DC26 /* DataCells.swift */,
+				18DCECFE29433C120092E30B /* LabelBuilder.swift */,
+				18AF2EA529526E1200CB2388 /* CustomizeShadows.swift */,
+				189AC57E29622B1400020293 /* Notifications.swift */,
 			);
 			path = "Support files";
 			sourceTree = "<group>";
@@ -214,11 +275,17 @@
 		F5F5237327E3A28600FAF539 /* Debtors-list */ = {
 			isa = PBXGroup;
 			children = (
-				F5E45C8C27E49CC700C75FA0 /* Profile screan */,
+				18E428A2293F655300DA70B5 /* SystemFiles */,
+				18CBF6A2293E6F7F00D4DC26 /* TabBar */,
+				F5E45C8C27E49CC700C75FA0 /* MainScreen */,
+				F58DA02B27E4D47F00D7739B /* Model */,
+				F5E45C8F27E49D5200C75FA0 /* DebtScreen  */,
+				F5E45C8E27E49D1C00C75FA0 /* DebtorsScreen */,
 				F5E45C8D27E49CE900C75FA0 /* Settings screan */,
-				F5E45C8F27E49D5200C75FA0 /* Add debt screan */,
-				F5E45C8E27E49D1C00C75FA0 /* Add debtor screan */,
+				18CBF6BD293E71B300D4DC26 /* DebtAdditionScreen */,
 				F5E45C9027E49D8C00C75FA0 /* Support files */,
+				18E428A1293F64F500DA70B5 /* Theme */,
+				18F926352941FCD000DF0CBE /* Ads */,
 				F5F5237A27E3A28600FAF539 /* Main.storyboard */,
 				F5F5237D27E3A28800FAF539 /* Assets.xcassets */,
 				F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */,
@@ -420,23 +487,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189AC57F29622B1400020293 /* Notifications.swift in Sources */,
+				18DCECFF29433C120092E30B /* LabelBuilder.swift in Sources */,
 				F5E45C9427E49F2300C75FA0 /* Model.swift in Sources */,
-				F58DA02D27E4D89F00D7739B /* Keys.swift in Sources */,
-				F5E45C9D27E4A04900C75FA0 /* CurrencySettingsVC.swift in Sources */,
+				18AF2EA629526E1300CB2388 /* CustomizeShadows.swift in Sources */,
+				18CBF6A8293E701100D4DC26 /* MainTableView.swift in Sources */,
+				18A183D829630D8600513904 /* NotificationsSettings.swift in Sources */,
+				18CBF6B2293E708200D4DC26 /* LightTheme.swift in Sources */,
 				F58DA02A27E4A92E00D7739B /* Data Manager.swift in Sources */,
-				F5E45C9F27E4A0C800C75FA0 /* YourNewDebtVC.swift in Sources */,
-				F5F5237927E3A28600FAF539 /* ProfileViewController.swift in Sources */,
-				F5E45C9927E49FDC00C75FA0 /* ProfileInfoModel.swift in Sources */,
-				F5E45CA727E4A1E000C75FA0 /* YourDebtModel.swift in Sources */,
-				F5E45C9627E49F4B00C75FA0 /* Image User defaults.swift in Sources */,
-				F5E45C9227E49EC500C75FA0 /* TableViewCell.swift in Sources */,
-				F5E45CA327E4A14D00C75FA0 /* DebtorsListTableVC.swift in Sources */,
+				18BA7E1429658B82006408A0 /* SettingsTableView.swift in Sources */,
+				18CBF6BA293E716200D4DC26 /* DebtorsList.swift in Sources */,
+				18CBF6A6293E6FE700D4DC26 /* MainScreen.swift in Sources */,
+				18F926342941E8A700DF0CBE /* MainScreenLayout.swift in Sources */,
+				18CBF6B0293E707800D4DC26 /* DarkTheme.swift in Sources */,
+				18CBF6AC293E706000D4DC26 /* DataCells.swift in Sources */,
+				18CBF6AA293E705400D4DC26 /* CustomizeСells.swift in Sources */,
+				18CBF6BC293E718800D4DC26 /* DebtList.swift in Sources */,
+				F5E45CA727E4A1E000C75FA0 /* Debtors.swift in Sources */,
+				18CBF6A4293E6FB100D4DC26 /* TabBar.swift in Sources */,
+				18CBF6C1293E71DF00D4DC26 /* Currency.swift in Sources */,
+				18CBF6B8293E713E00D4DC26 /* Settings.swift in Sources */,
+				18CBF6BF293E71C700D4DC26 /* AddNewDebt.swift in Sources */,
 				F5F5237527E3A28600FAF539 /* AppDelegate.swift in Sources */,
+				18CBF6B4293E70F100D4DC26 /* DebtorCell.swift in Sources */,
+				18CBF6B6293E710A00D4DC26 /* SettingsCell.swift in Sources */,
 				F5F5237727E3A28600FAF539 /* SceneDelegate.swift in Sources */,
-				F5E45CA927E4A22100C75FA0 /* YouDebtTableViewCell.swift in Sources */,
-				F5E45CA527E4A16C00C75FA0 /* NewDebtorVC.swift in Sources */,
-				F5E45CA127E4A12200C75FA0 /* YourDebtListTableVC.swift in Sources */,
-				F5E45C9B27E4A01100C75FA0 /* SettingsVC.swift in Sources */,
+				18CBF6AE293E706E00D4DC26 /* SetColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,15 +691,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9XP4F76DYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Debtors-list/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Debtors list";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face id";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,9 +710,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vlad-Lytvynets.Debtors-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -644,15 +726,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9XP4F76DYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Debtors-list/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Debtors list";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face id";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -660,9 +745,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vlad-Lytvynets.Debtors-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

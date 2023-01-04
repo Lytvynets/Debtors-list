@@ -14,13 +14,6 @@ class DataManager {
     var youDebtArray: Results<YourDebtModel>!
     var debtorsArray: Results<Debtors>!
     
-    func saveYouDebtToRealm(debtor: YourDebtModel, tableView: UITableView){
-        try! realm.write{
-            realm.add(debtor)
-            tableView.reloadData()
-        }
-    }
-    
     
     func deleteYouDebtFromRealm(debtor: YourDebtModel, tableView: UITableView){
         try! realm.write{
@@ -30,10 +23,16 @@ class DataManager {
     }
     
     
-    func saveToRealm(debtor: Debtors, tableView: UITableView){
+    func saveToRealm(debtor: Debtors){
         try! realm.write{
             realm.add(debtor)
-            tableView.reloadData()
+        }
+    }
+    
+    
+    func saveToRealm2(debtor: YourDebtModel){
+        try! realm.write{
+            realm.add(debtor)
         }
     }
     
