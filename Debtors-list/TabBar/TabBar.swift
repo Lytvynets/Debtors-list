@@ -22,8 +22,8 @@ class TabBarVC: UITabBarController{
     func setup(){
         viewControllers = [
             createNavController(rootVC: MainScreen(), title: "Last operations", image: UIImage(named: "icons8-ledger-25")!),
-            createNavController(rootVC: DebtorsList(), title: "Debtors list", image: UIImage(named: "icons8-safe-out-25")!),
-            createNavController(rootVC: DebtList(), title: "Debt list", image: UIImage(named: "icons8-safe-in-25")!),
+            createNavController(rootVC: DebtorsList(), title: "Given", image: UIImage(named: "icons8-safe-out-25")!),
+            createNavController(rootVC: DebtList(), title: "Taken", image: UIImage(named: "icons8-safe-in-25")!),
             createNavController(rootVC: Settings2(), title: "Settings", image: UIImage(named: "icons8-settings-75")!)
         ]
     }

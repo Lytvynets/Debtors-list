@@ -18,6 +18,8 @@ protocol ColorDelegate {
     var textFieldBackgroundColor: UIColor { get }
     var infoViewColor: UIColor { get }
     var infoViewLabelColor: UIColor { get }
+    var placeholderTextColor: UIColor { get }
+    
 }
 
 

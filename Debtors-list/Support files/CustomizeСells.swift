@@ -43,7 +43,6 @@ class CustomizeСells {
     
     
     func fontSettingsCell(_ cell: DebtorCell, view: UIView ) {
-        //   customizeСells.adaptiveFontCells(cell)
         cell.numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.025)
         cell.firstNameLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
         cell.secondNameLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.020)
@@ -51,28 +50,4 @@ class CustomizeСells {
         cell.currencyLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
         cell.dateLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.018)
     }
-    
-    
-//    func adaptiveFontCells(_ cell: DebtorCell) {
-//        if cell.firstNameLabel.text?.count ?? 0 >= 6 {
-//            cell.firstNameLabel.font = UIFont(name: "Noteworthy Light", size: 14)
-//            cell.secondNameLabel.font = UIFont(name: "Noteworthy Light", size: 14)
-//            cell.numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: 15)
-//        } else if cell.firstNameLabel.text?.count ?? 0 >= 4  {
-//            cell.firstNameLabel.font = UIFont(name: "Noteworthy Light", size: 13)
-//            cell.secondNameLabel.font = UIFont(name: "Noteworthy Light", size: 13)
-//            cell.numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: 15)
-//        }else {
-//            cell.firstNameLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-//            cell.secondNameLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-//            cell.numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-//        }
-//        if cell.sumOfDebtLabel.text?.count ?? 0 >= 4 {
-//            cell.sumOfDebtLabel.font = UIFont(name: "Noteworthy Light", size: 13)
-//            cell.currencyLabel.font = UIFont(name: "Noteworthy Light", size: 13)
-//        } else {
-//            cell.sumOfDebtLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-//            cell.currencyLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-//        }
-//    }
 }

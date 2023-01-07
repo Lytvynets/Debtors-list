@@ -9,8 +9,11 @@ import UIKit
 import RealmSwift
 import LocalAuthentication
 import UserNotifications
+
 class MainScreen: UIViewController {
     
+    var networkManager = NetworkManager()
+    var currency = Currency2()
     var customizeСells = CustomizeСells()
     var dataCells = DataCells()
     var dataManager = DataManager()
@@ -19,19 +22,28 @@ class MainScreen: UIViewController {
     var setColors = SetColors()
     let notifications = Notifications()
     
+    
     //Settings state
     static var faceTouchId = false
     static var roundResult = false
     static var mainCurrency = ""
     
-    lazy var debtLabel = LabelBuilder(fontSize: 25, startText: "235$", color: .green)
-    lazy var youDebtLabel = LabelBuilder(fontSize: 25, startText: "-35$", color: .red)
+    static var uah = ""
+    static var eur = ""
+    static var chf = ""
+    static var gbp = ""
+    static var pln = ""
+    static var aud = ""
+    static var sek = ""
+    static var jpy = ""
+    static var kwd = ""
+    
+    lazy var debtLabel = LabelBuilder(fontSize: 25, startText: "0$", color: .green)
+    lazy var youDebtLabel = LabelBuilder(fontSize: 25, startText: "0$", color: .red)
     lazy var markDebtLabel = LabelBuilder(fontSize: 15, startText: "Given", color: nil)
     lazy var markYouDebtLabel = LabelBuilder(fontSize: 15, startText: "Taken", color: nil)
     lazy var debtStackView = StackViewBuilder(space: 3, type: .center, axisType: .vertical, fillType: .fill)
     lazy var youDebtStackView = StackViewBuilder(space: 3, type: .center, axisType: .vertical, fillType: .fill)
-    
-    
     
     
     let mainTableView: UITableView = {
@@ -63,7 +75,6 @@ class MainScreen: UIViewController {
     }
     
     
-    
     override func viewDidDisappear(_ animated: Bool) {
         array.removeAll()
     }
@@ -82,15 +93,17 @@ class MainScreen: UIViewController {
     
     
     private func sumLabelsInfo() {
-        var debtSum: Double = 0.0
-        var debtorsSum: Double = 0.0
-        convertCurrency(&debtSum, &debtorsSum)
-        if MainScreen.roundResult == false {
-            self.youDebtLabel.text = "-\((NSString(format:"%.2f", debtSum))) $"
-            self.debtLabel.text = "\((NSString(format:"%.2f", debtorsSum))) $"
-        } else {
-            self.youDebtLabel.text = "-\(Int(debtSum)) $"
-            self.debtLabel.text = "\(Int(debtorsSum)) $"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            var debtSum: Double = 0.0
+            var debtorsSum: Double = 0.0
+            self.currency.convertCurrency(&debtSum, &debtorsSum)
+            if MainScreen.roundResult == false {
+                self.youDebtLabel.text = "-\((NSString(format:"%.2f", debtSum)))$"
+                self.debtLabel.text = "\((NSString(format:"%.2f", debtorsSum)))$"
+            } else {
+                self.youDebtLabel.text = "-\(Int(debtSum))$"
+                self.debtLabel.text = "\(Int(debtorsSum))$"
+            }
         }
     }
     
@@ -100,39 +113,6 @@ class MainScreen: UIViewController {
             firstArray.date > secondArray.date
         }
         sortedArray = sortArray
-    }
-    
-    
-    private func convertCurrency(_ debtSum: inout Double, _ debtorsSum: inout Double) {
-        for i in dataManager.youDebtArray {
-            switch i.currency {
-            case "UAH":
-                debtSum += i.sum / 36.92
-            case "EUR":
-                debtSum += i.sum * 1.05
-            case "CHF":
-                debtSum += i.sum * 1.06
-            case "GBP":
-                debtSum += i.sum * 1.22
-            default:
-                debtSum += i.sum
-            }
-        }
-        
-        for i in  dataManager.debtorsArray {
-            switch i.currency {
-            case "UAH":
-                debtorsSum += i.sum / 36.92
-            case "EUR":
-                debtorsSum += i.sum * 1.05
-            case "CHF":
-                debtorsSum += i.sum * 1.06
-            case "GBP":
-                debtorsSum += i.sum * 1.22
-            default:
-                debtorsSum += i.sum
-            }
-        }
     }
     
     
@@ -175,9 +155,9 @@ class MainScreen: UIViewController {
         navigationController?.tabBarController?.tabBar.alpha = 0
         let context = LAContext()
         var error: NSError?
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
             let reason = "Identify yourself!"
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) {
                 [weak self] success, error in
                 DispatchQueue.main.async {
                     guard success, error == nil else {
@@ -203,5 +183,4 @@ class MainScreen: UIViewController {
             self.present(ac, animated: true)
         }
     }
-    
 }

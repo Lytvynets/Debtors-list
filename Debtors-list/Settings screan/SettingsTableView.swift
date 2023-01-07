@@ -8,7 +8,7 @@
 import UIKit
 
 extension Settings2: UITableViewDelegate, UITableViewDataSource {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionTitles.count
     }
@@ -28,7 +28,6 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionTitles[section]
     }
@@ -38,6 +37,7 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return cellSpacingHeight
     }
+    
     
     // Make the background color show through
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -53,7 +53,6 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
         customizeСells.cellsColor(cell)
         cell.layer.cornerRadius = 15
         
-        
         switch (indexPath as NSIndexPath).section {
         case 0:
             switch (indexPath as NSIndexPath).row {
@@ -65,7 +64,6 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
                 accessory.image = image
                 accessory.tintColor = .gray
                 cell.accessoryView = accessory
-                
             default:
                 print("default 1")
             }
@@ -108,7 +106,6 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
                 accessory.image = image
                 accessory.tintColor = .gray
                 cell.accessoryView = accessory
-                
             case 1:
                 cell.textLabel?.font = UIFont(name: "Avenir Book", size: view.frame.height * 0.02)
                 cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
@@ -117,7 +114,6 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
                 accessory.image = image
                 accessory.tintColor = .gray
                 cell.accessoryView = accessory
-                
             default:
                 print("default 3")
             }
@@ -176,5 +172,4 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.height / 15
     }
-    
 }

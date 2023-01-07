@@ -11,9 +11,13 @@ import RealmSwift
 
 class Notifications: NSObject, UNUserNotificationCenterDelegate {
     
+    var currency = Currency2()
     let notificationsCenter = UNUserNotificationCenter.current()
     var notificationCenter = NotificationCenter.default
+    var badge: NSNumber = 0
     var dataManager = DataManager()
+    var debt = ""
+    var debtors = ""
     
     static var hours = 0 {
         didSet {
@@ -34,25 +38,20 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
     }
     
     
-    var debt = ""
-    var debtors = ""
-    
-    
     func getNotification(type: String) {
-        let realm = try! Realm()
-        dataManager.debtorsArray = realm.objects(Debtors.self)
-        dataManager.youDebtArray = realm.objects(YourDebtModel.self)
+        
         var debtSum: Double = 0.0
         var debtorsSum: Double = 0.0
         
-        convertCurrency(&debtSum, &debtorsSum)
+        currency.convertCurrency(&debtSum, &debtorsSum)
         if MainScreen.roundResult == false {
-            self.debt = "-\((NSString(format:"%.2f", debtSum))) $"
-            self.debtors = "\((NSString(format:"%.2f", debtorsSum))) $"
+            self.debt = "-\((NSString(format:"%.2f", debtSum)))$"
+            self.debtors = "\((NSString(format:"%.2f", debtorsSum)))$"
         } else {
-            self.debt = "-\(Int(debtSum)) $"
-            self.debtors = "\(Int(debtorsSum)) $"
+            self.debt = "-\(Int(debtSum))$"
+            self.debtors = "\(Int(debtorsSum))$"
         }
+        
         
         let content = UNMutableNotificationContent()
         content.title = "You debts"
@@ -71,44 +70,12 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         
         let id = "Local Notification"
         let request = UNNotificationRequest(identifier: id,
-                                            content: content, trigger: trigger)
+                                            content: content,
+                                            trigger: trigger)
         
         notificationsCenter.add(request) { error in
             if error != nil {
                 print("Error")
-            }
-        }
-    }
-    
-    
-    private func convertCurrency(_ debtSum: inout Double, _ debtorsSum: inout Double) {
-        for i in dataManager.youDebtArray {
-            switch i.currency {
-            case "UAH":
-                debtSum += i.sum / 36.92
-            case "EUR":
-                debtSum += i.sum * 1.05
-            case "CHF":
-                debtSum += i.sum * 1.06
-            case "GBP":
-                debtSum += i.sum * 1.22
-            default:
-                debtSum += i.sum
-            }
-        }
-        
-        for i in  dataManager.debtorsArray {
-            switch i.currency {
-            case "UAH":
-                debtorsSum += i.sum / 36.92
-            case "EUR":
-                debtorsSum += i.sum * 1.05
-            case "CHF":
-                debtorsSum += i.sum * 1.06
-            case "GBP":
-                debtorsSum += i.sum * 1.22
-            default:
-                debtorsSum += i.sum
             }
         }
     }

@@ -14,9 +14,13 @@ class NotificationsSettings: UIViewController {
     var setColors = SetColors()
     var timeLabel = LabelBuilder(fontSize: 18, startText: "Time", color: SetColors.currentColor.labelsColor)
     
+    lazy var weekdayStackView = StackViewBuilder(space: 5, type: .center, axisType: .horizontal, fillType: .fillEqually)
+    
+    
+    //MARK: - Buttons
     lazy var mondayButton: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle("Mon.", for: .normal)
+        button.setTitle("Mon", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = .white
         button.backgroundColor = .gray
@@ -26,15 +30,10 @@ class NotificationsSettings: UIViewController {
         return button
     }()
     
-    @objc func returnMonday() {
-        Notifications.weekDay = 2
-        changeColorButtons()
-        not.getNotification(type: "Local notification")
-    }
     
     lazy var tuesdayButton: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle("Tue.", for: .normal)
+        button.setTitle("Tue", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = .white
         button.backgroundColor = .gray
@@ -44,16 +43,10 @@ class NotificationsSettings: UIViewController {
         return button
     }()
     
-    @objc func returnTuesday() {
-        Notifications.weekDay = 3
-        changeColorButtons()
-        not.getNotification(type: "Local notification")
-    }
-    
     
     lazy var wednesdayButton: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle("Wed.", for: .normal)
+        button.setTitle("Wed", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = .white
         button.backgroundColor = .gray
@@ -63,15 +56,10 @@ class NotificationsSettings: UIViewController {
         return button
     }()
     
-    @objc func returnWednesday() {
-        Notifications.weekDay = 4
-        changeColorButtons()
-        not.getNotification(type: "Local notification")
-    }
     
     lazy var thursdayButton: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle("Thu.", for: .normal)
+        button.setTitle("Thu", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = .white
         button.backgroundColor = .gray
@@ -81,15 +69,10 @@ class NotificationsSettings: UIViewController {
         return button
     }()
     
-    @objc func returnThursday() {
-        Notifications.weekDay = 5
-        changeColorButtons()
-        not.getNotification(type: "Local notification")
-    }
     
     lazy var fridayButton: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle("Fri.", for: .normal)
+        button.setTitle("Fri", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = .white
         button.backgroundColor = .gray
@@ -99,33 +82,23 @@ class NotificationsSettings: UIViewController {
         return button
     }()
     
-    @objc func returnFriday() {
-        Notifications.weekDay = 6
-        changeColorButtons()
-        not.getNotification(type: "Local notification")
-    }
     
     lazy var saturdayButton: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle("Sat.", for: .normal)
+        button.setTitle("Sat", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = .white
-        button.backgroundColor = .gray
+        button.backgroundColor = .lightGray
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(returnSaturday), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    @objc func returnSaturday() {
-        Notifications.weekDay = 7
-        changeColorButtons()
-        not.getNotification(type: "Local notification")
-    }
     
     lazy var sundayButton: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle("Sun.", for: .normal)
+        button.setTitle("Sun", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = .white
         button.layer.cornerRadius = 5
@@ -135,16 +108,13 @@ class NotificationsSettings: UIViewController {
         return button
     }()
     
-    @objc func returnSunday() {
-        Notifications.weekDay = 1
-        changeColorButtons()
-        not.getNotification(type: "Local notification")
-    }
     
     lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.timeZone = NSTimeZone.local
         datePicker.datePickerMode = .time
+        datePicker.layer.cornerRadius = 5
+        datePicker.clipsToBounds = true
         datePicker.locale = Locale(identifier: "en_GB")
         datePicker.backgroundColor = UIColor.white
         datePicker.translatesAutoresizingMaskIntoConstraints = false
@@ -153,15 +123,14 @@ class NotificationsSettings: UIViewController {
     }()
     
     
-    lazy var weekdayStackView = StackViewBuilder(space: 5, type: .center, axisType: .horizontal, fillType: .fillEqually)
-    
-    
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = SetColors.currentColor.backgroundColor
         view.addSubview(weekdayStackView)
         view.addSubview(datePicker)
         view.addSubview(timeLabel)
+        
         navigationItem.title = "Notifications"
         weekdayStackView.addArrangedSubview(mondayButton)
         weekdayStackView.addArrangedSubview(tuesdayButton)
@@ -174,25 +143,20 @@ class NotificationsSettings: UIViewController {
         setColors.navigationControllerColorSettings(self)
         setColors.backButtonSettings(self)
         datePicker.date = UserDefaults.standard.object(forKey: "saveDate") as? Date ?? Date.now
-        
-       
         changeColorButtons()
-        
     }
     
     
+    //MARK: - Actions
     @objc func datePickerValueChanged(_ sender: UIDatePicker){
         let dateFormatterHours: DateFormatter = DateFormatter()
         let dateFormatterMinutes: DateFormatter = DateFormatter()
         dateFormatterHours.dateFormat = "HH"
         dateFormatterMinutes.dateFormat = "mm"
-        
         let hoursSelect = dateFormatterHours.string(from: sender.date)
         let minutesSelect = dateFormatterMinutes.string(from: sender.date)
-        
         Notifications.hours = Int(hoursSelect) ?? 0
         Notifications.minutes = Int(minutesSelect) ?? 0
-        
         print("hours \(Notifications.hours)")
         print("minutes \(Notifications.minutes)")
         print("day \(Notifications.weekDay)")
@@ -201,49 +165,113 @@ class NotificationsSettings: UIViewController {
     }
     
     
+    @objc func returnSunday() {
+        Notifications.weekDay = 1
+        changeColorButtons()
+        not.getNotification(type: "Local notification")
+    }
+    
+    
+    @objc func returnMonday() {
+        Notifications.weekDay = 2
+        changeColorButtons()
+        not.getNotification(type: "Local notification")
+    }
+    
+    
+    @objc func returnTuesday() {
+        Notifications.weekDay = 3
+        changeColorButtons()
+        not.getNotification(type: "Local notification")
+    }
+    
+    
+    @objc func returnWednesday() {
+        Notifications.weekDay = 4
+        changeColorButtons()
+        not.getNotification(type: "Local notification")
+    }
+    
+    
+    @objc func returnThursday() {
+        Notifications.weekDay = 5
+        changeColorButtons()
+        not.getNotification(type: "Local notification")
+    }
+    
+    
+    @objc func returnFriday() {
+        Notifications.weekDay = 6
+        changeColorButtons()
+        not.getNotification(type: "Local notification")
+    }
+    
+    
+    @objc func returnSaturday() {
+        Notifications.weekDay = 7
+        changeColorButtons()
+        not.getNotification(type: "Local notification")
+    }
+    
+    
     func changeColorButtons() {
-       if Notifications.weekDay == 1 {
-           sundayButton.backgroundColor = .orange
+        if Notifications.weekDay == 1 {
+            sundayButton.backgroundColor = .orange
+            sundayButton.setTitleColor(.white, for: .normal)
         } else {
-            sundayButton.backgroundColor = .gray
+            sundayButton.backgroundColor = #colorLiteral(red: 0.9373161197, green: 0.937415421, blue: 0.9404873252, alpha: 1)
+            sundayButton.setTitleColor(.black, for: .normal)
         }
         
         if Notifications.weekDay == 2 {
             mondayButton.backgroundColor = .orange
-         } else {
-             mondayButton.backgroundColor = .gray
-         }
+            mondayButton.setTitleColor(.white, for: .normal)
+        } else {
+            mondayButton.backgroundColor = #colorLiteral(red: 0.9373161197, green: 0.937415421, blue: 0.9404873252, alpha: 1)
+            mondayButton.setTitleColor(.black, for: .normal)
+        }
         
         if Notifications.weekDay == 3 {
             tuesdayButton.backgroundColor = .orange
-         } else {
-             tuesdayButton.backgroundColor = .gray
-         }
+            tuesdayButton.setTitleColor(.white, for: .normal)
+        } else {
+            tuesdayButton.backgroundColor = #colorLiteral(red: 0.9373161197, green: 0.937415421, blue: 0.9404873252, alpha: 1)
+            tuesdayButton.setTitleColor(.black, for: .normal)
+        }
         
         if Notifications.weekDay == 4 {
             wednesdayButton.backgroundColor = .orange
-         } else {
-             wednesdayButton.backgroundColor = .gray
-         }
+            wednesdayButton.setTitleColor(.white, for: .normal)
+        } else {
+            wednesdayButton.backgroundColor = #colorLiteral(red: 0.9373161197, green: 0.937415421, blue: 0.9404873252, alpha: 1)
+            wednesdayButton.setTitleColor(.black, for: .normal)
+        }
         
         if Notifications.weekDay == 5 {
             thursdayButton.backgroundColor = .orange
-         } else {
-             thursdayButton.backgroundColor = .gray
-         }
+            thursdayButton.setTitleColor(.white, for: .normal)
+        } else {
+            thursdayButton.backgroundColor = #colorLiteral(red: 0.9373161197, green: 0.937415421, blue: 0.9404873252, alpha: 1)
+            thursdayButton.setTitleColor(.black, for: .normal)
+        }
         
         if Notifications.weekDay == 6 {
             fridayButton.backgroundColor = .orange
-         } else {
-             fridayButton.backgroundColor = .gray
-         }
+            fridayButton.setTitleColor(.white, for: .normal)
+        } else {
+            fridayButton.backgroundColor = #colorLiteral(red: 0.9373161197, green: 0.937415421, blue: 0.9404873252, alpha: 1)
+            fridayButton.setTitleColor(.black, for: .normal)
+        }
         
         if Notifications.weekDay == 7 {
             saturdayButton.backgroundColor = .orange
-         } else {
-             saturdayButton.backgroundColor = .gray
-         }
+            saturdayButton.setTitleColor(.white, for: .normal)
+        } else {
+            saturdayButton.backgroundColor = #colorLiteral(red: 0.9373161197, green: 0.937415421, blue: 0.9404873252, alpha: 1)
+            saturdayButton.setTitleColor(.black, for: .normal)
+        }
     }
+    
     
     func weekdayLayout() {
         NSLayoutConstraint.activate([

@@ -46,7 +46,6 @@ class DebtList: UITableViewController {
     }
     
     
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DebtCell", for: indexPath) as! DebtorCell
         let debtors = dataManager.youDebtArray[indexPath.row]
@@ -71,8 +70,6 @@ class DebtList: UITableViewController {
     }
     
 
-    
-    
     //MARK: - Action bitton
     @objc func addTapped() {
         let vc = AddNewDebt(state: true)

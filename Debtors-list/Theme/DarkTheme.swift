@@ -8,6 +8,7 @@
 import UIKit
 
 class DarkTheme: ColorDelegate {
+    var placeholderTextColor: UIColor = .gray
     var textFieldBackgroundColor: UIColor = #colorLiteral(red: 0.05678321248, green: 0.05382507496, blue: 0.0633214693, alpha: 1)
     var backgroundTabBar: UIColor = #colorLiteral(red: 0.05678321248, green: 0.05382507496, blue: 0.0633214693, alpha: 1)
     var labelsColor: UIColor = .white
