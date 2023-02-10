@@ -16,10 +16,10 @@ Now you'll need to build the dependencies.
 * [Realm](https://realm.io/)
 
 ## Screenshots 
-![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors1.png)
-![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors2.png)
-![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors3.png)
-![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/debtors4.png)
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202023-01-07%20at%2018.02.27.png)
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202023-01-07%20at%2018.02.31.png)
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202023-01-07%20at%2018.02.44.png)
+![Images](https://github.com/Lytvynets/CSGOWeaponStats/blob/master/Debtors-Img/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202023-01-07%20at%2018.05.22.png)
  
 ## Past versions
 
