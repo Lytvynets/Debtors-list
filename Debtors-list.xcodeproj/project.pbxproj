@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18944A0F2967A67D0052A024 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944A0E2967A67D0052A024 /* NetworkManager.swift */; };
 		189AC57F29622B1400020293 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AC57E29622B1400020293 /* Notifications.swift */; };
+		189CEE712973419A0051A33E /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CEE702973419A0051A33E /* RewardedAdManager.swift */; };
 		18A183D829630D8600513904 /* NotificationsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A183D729630D8600513904 /* NotificationsSettings.swift */; };
 		18A74BC729672D12001A2E7E /* NewDebtTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A74BC629672D12001A2E7E /* NewDebtTableView.swift */; };
 		18A74BC929672E4E001A2E7E /* AddNewDebtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A74BC829672E4E001A2E7E /* AddNewDebtLayout.swift */; };
@@ -38,7 +39,6 @@
 		F5E45CA727E4A1E000C75FA0 /* Debtors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45CA627E4A1E000C75FA0 /* Debtors.swift */; };
 		F5F5237527E3A28600FAF539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237427E3A28600FAF539 /* AppDelegate.swift */; };
 		F5F5237727E3A28600FAF539 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5237627E3A28600FAF539 /* SceneDelegate.swift */; };
-		F5F5237C27E3A28600FAF539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237A27E3A28600FAF539 /* Main.storyboard */; };
 		F5F5237E27E3A28800FAF539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237D27E3A28800FAF539 /* Assets.xcassets */; };
 		F5F5238127E3A28800FAF539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */; };
 		F5F5238C27E3A28800FAF539 /* Debtors_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5238B27E3A28800FAF539 /* Debtors_listTests.swift */; };
@@ -67,6 +67,7 @@
 /* Begin PBXFileReference section */
 		18944A0E2967A67D0052A024 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		189AC57E29622B1400020293 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		189CEE702973419A0051A33E /* RewardedAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
 		18A183D729630D8600513904 /* NotificationsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSettings.swift; sourceTree = "<group>"; };
 		18A74BC629672D12001A2E7E /* NewDebtTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDebtTableView.swift; sourceTree = "<group>"; };
 		18A74BC829672E4E001A2E7E /* AddNewDebtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDebtLayout.swift; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		F5F5237127E3A28600FAF539 /* Debtors-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debtors-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F5237427E3A28600FAF539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F5237627E3A28600FAF539 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5F5237B27E3A28600FAF539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5F5237D27E3A28800FAF539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F5238027E3A28800FAF539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5F5238227E3A28800FAF539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		189CEE6F297341670051A33E /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				189CEE702973419A0051A33E /* RewardedAdManager.swift */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
 		18CBF6A2293E6F7F00D4DC26 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +314,7 @@
 				18E2026D29688A9F00ED17BD /* Networking */,
 				18D1777D296638AF00089222 /* Notifications */,
 				18E428A1293F64F500DA70B5 /* Theme */,
-				F5F5237A27E3A28600FAF539 /* Main.storyboard */,
+				189CEE6F297341670051A33E /* Ads */,
 				F5F5237D27E3A28800FAF539 /* Assets.xcassets */,
 				F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */,
 				F5F5238227E3A28800FAF539 /* Info.plist */,
@@ -440,7 +448,6 @@
 				F5F523A727E3A3EB00FAF539 /* .gitignore in Resources */,
 				F5F5238127E3A28800FAF539 /* LaunchScreen.storyboard in Resources */,
 				F5F5237E27E3A28800FAF539 /* Assets.xcassets in Resources */,
-				F5F5237C27E3A28600FAF539 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +540,7 @@
 				18CBF6BF293E71C700D4DC26 /* AddNewDebt.swift in Sources */,
 				F5F5237527E3A28600FAF539 /* AppDelegate.swift in Sources */,
 				18CBF6B4293E70F100D4DC26 /* DebtorCell.swift in Sources */,
+				189CEE712973419A0051A33E /* RewardedAdManager.swift in Sources */,
 				18CBF6B6293E710A00D4DC26 /* SettingsCell.swift in Sources */,
 				18A74BC929672E4E001A2E7E /* AddNewDebtLayout.swift in Sources */,
 				F5F5237727E3A28600FAF539 /* SceneDelegate.swift in Sources */,
@@ -573,14 +581,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F5F5237A27E3A28600FAF539 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5F5237B27E3A28600FAF539 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -715,7 +715,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 9XP4F76DYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Debtors-list/Info.plist";
@@ -731,7 +731,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vlad-Lytvynets.Debtors-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -750,7 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 9XP4F76DYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Debtors-list/Info.plist";
@@ -766,7 +766,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vlad-Lytvynets.Debtors-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

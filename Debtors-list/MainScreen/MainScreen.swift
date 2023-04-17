@@ -93,17 +93,15 @@ class MainScreen: UIViewController {
     
     
     private func sumLabelsInfo() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            var debtSum: Double = 0.0
-            var debtorsSum: Double = 0.0
-            self.currency.convertCurrency(&debtSum, &debtorsSum)
-            if MainScreen.roundResult == false {
-                self.youDebtLabel.text = "-\((NSString(format:"%.2f", debtSum)))$"
-                self.debtLabel.text = "\((NSString(format:"%.2f", debtorsSum)))$"
-            } else {
-                self.youDebtLabel.text = "-\(Int(debtSum))$"
-                self.debtLabel.text = "\(Int(debtorsSum))$"
-            }
+        var debtSum: Double = 0.0
+        var debtorsSum: Double = 0.0
+        self.currency.convertCurrency(&debtSum, &debtorsSum)
+        if MainScreen.roundResult == false {
+            self.youDebtLabel.text = "-\((NSString(format:"%.2f", debtSum)))$"
+            self.debtLabel.text = "\((NSString(format:"%.2f", debtorsSum)))$"
+        } else {
+            self.youDebtLabel.text = "-\(Int(debtSum))$"
+            self.debtLabel.text = "\(Int(debtorsSum))$"
         }
     }
     

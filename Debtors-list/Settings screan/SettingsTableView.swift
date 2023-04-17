@@ -22,12 +22,14 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
             return sectionContent[1].count
         case 2:
             return sectionContent[2].count
+        case 3:
+            return sectionContent[3].count
         default:
             return sectionContent[0].count
         }
     }
     
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionTitles[section]
     }
@@ -117,6 +119,17 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
             default:
                 print("default 3")
             }
+        case 3:
+            switch (indexPath as NSIndexPath).row {
+            case 0:
+                cell.textLabel?.font = UIFont(name: "Avenir Book", size: view.frame.height * 0.02)
+                cell.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+                cell.accessoryType = .none
+                cell.accessoryView = .none
+                
+            default:
+                print("default 3")
+            }
         default: break
         }
         return cell
@@ -143,6 +156,16 @@ extension Settings2: UITableViewDelegate, UITableViewDataSource {
                 if let url = URL(string: otherAppsUrl) {
                     UIApplication.shared.open(url, options: [:])
                 }
+            default: break
+            }
+        case 3:
+            switch (indexPath as NSIndexPath).row {
+            case 0:
+                let generator = UIImpactFeedbackGenerator(style: .heavy)
+                generator.impactOccurred()
+                rewardedAdManager.showRewardedAd(viewController: self)
+                print("Watch Ads")
+                
             default: break
             }
         default:

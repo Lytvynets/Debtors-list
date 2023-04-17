@@ -9,14 +9,15 @@ import UIKit
 
 class Settings2: UIViewController {
     
-    var sectionTitles = ["   ", "   ", "   "]
-    var sectionContent = [["Notification"],["Touch id", "Round the result", "Dark theme"], ["Privacy policy", "Other apps"]]
+    var sectionTitles = ["   ", "   ", "   ", "  "]
+    var sectionContent = [["Notification"],["Touch ID/Face ID", "Round the result", "Dark theme"], ["Privacy policy", "Other apps"], ["Watch Ads to support the project"]]
+  // var sectionFooters = ["   ", "   ", "   ", "If you want to support the project"]
     var customizeСells = CustomizeСells()
     var setColors = SetColors()
     let privacyPolicyUrl = "https://www.termsfeed.com/live/5a26bfcc-4d37-48ac-8beb-58532329e612"
     let otherAppsUrl = "https://apps.apple.com/us/developer/vladyslav-lytvynets/id1660079103"
     let cellSpacingHeight: CGFloat = 5
-    
+    var rewardedAdManager = RewardedAdManager()
     
     let settingsTableView: UITableView = {
         let tv = UITableView()
@@ -54,12 +55,11 @@ class Settings2: UIViewController {
         view.addSubview(settingsTableView)
         view.backgroundColor = SetColors.currentColor.backgroundColor
         tableViewSettings()
-        
+        rewardedAdManager.loadRewardedAd()
         setColors.navigationControllerColorSettings(self)
         colorSwitch.isOn = UserDefaults.standard.bool(forKey: "LightTheme")
         touchIdSwitch.isOn = UserDefaults.standard.bool(forKey: "idIsOn")
         roundResultSwitch.isOn = UserDefaults.standard.bool(forKey: "Round")
-        
         NSLayoutConstraint.activate([
             settingsTableView.topAnchor.constraint(equalTo: view.topAnchor),
             settingsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),

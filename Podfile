@@ -6,6 +6,6 @@ target 'Debtors-list' do
   use_frameworks!
 
  pod 'RealmSwift'
-
+ pod 'Google-Mobile-Ads-SDK'
 
 end

@@ -7,15 +7,17 @@
 
 import UIKit
 import RealmSwift
+//import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+   
     var dataManager = DataManager()
     let notifications = Notifications()
     var networkManager = NetworkManager()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+       // GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         if UserDefaults.standard.object(forKey: "LightTheme") != nil {
             SetColors.currentColor = UserDefaults.standard.bool(forKey: "LightTheme") ? DarkTheme() : LightTheme()
