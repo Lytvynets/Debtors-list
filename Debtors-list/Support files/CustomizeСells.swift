@@ -42,12 +42,22 @@ class CustomizeСells {
     }
     
     
-    func fontSettingsCell(_ cell: DebtorCell, view: UIView ) {
-        cell.numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.025)
-        cell.firstNameLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
-        cell.secondNameLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.020)
-        cell.sumOfDebtLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
-        cell.currencyLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
-        cell.dateLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.018)
+//    func fontSettingsCell(_ cell: DebtorCell, view: UIView ) {
+//        cell.numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.025)
+//        cell.firstNameLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
+//        cell.secondNameLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.020)
+//        cell.sumOfDebtLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
+//        cell.currencyLabel.font = UIFont(name: "Noteworthy Bold", size: view.frame.height * 0.020)
+//        cell.dateLabel.font = UIFont(name: "Noteworthy Light", size: view.frame.height * 0.018)
+//    }
+    
+    
+    func fontSettingsCell(_ cell: DebtorCell, screenSize: CGFloat ) {
+        cell.numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: screenSize * 0.025)
+        cell.firstNameLabel.font = UIFont(name: "Noteworthy Bold", size: screenSize * 0.020)
+        cell.secondNameLabel.font = UIFont(name: "Noteworthy Light", size: screenSize * 0.020)
+        cell.sumOfDebtLabel.font = UIFont(name: "Noteworthy Bold", size: screenSize * 0.020)
+        cell.currencyLabel.font = UIFont(name: "Noteworthy Bold", size: screenSize * 0.020)
+        cell.dateLabel.font = UIFont(name: "Noteworthy Light", size: screenSize * 0.018)
     }
 }

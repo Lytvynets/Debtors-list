@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// потрібно якось переробити
 extension MainScreen {
     
     func setup() {

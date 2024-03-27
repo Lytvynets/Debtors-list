@@ -15,7 +15,7 @@ class DebtList: UITableViewController {
     var completionYouAllSum: ((Int) -> ())?
     var dataManager = DataManager()
     var setColors = SetColors()
-    
+    let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,8 @@ class DebtList: UITableViewController {
         let debtors = dataManager.youDebtArray[indexPath.row]
         customizeСells.settingsDebtorsCell(cell, .red)
         dataCell.debtorInfo(cell, indexPath, debtors)
-        customizeСells.fontSettingsCell(cell, view: view)
+       // customizeСells.fontSettingsCell(cell, view: view)
+        customizeСells.fontSettingsCell(cell, screenSize: CGFloat(screenSize.height))
         customizeСells.colorSumLabel(debtors, cell)
         return cell
     }

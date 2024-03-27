@@ -8,13 +8,18 @@
 import UIKit
 import RealmSwift
 
-class DebtorsList: UITableViewController {
+class DebtorsList: UITableViewController, EditDataDelegate {
+    func reloadTableView() {
+        self.tableView.reloadData()
+    }
+    
     
     var customizeСells = CustomizeСells()
     var dataCells = DataCells()
     var dataManager = DataManager()
     var completionAllSum: ((Int) -> ())?
     var setColors = SetColors()
+    let screenSize: CGRect = UIScreen.main.bounds
     
     
     override func viewDidLoad() {
@@ -52,7 +57,8 @@ class DebtorsList: UITableViewController {
         let debtors = dataManager.debtorsArray[indexPath.row]
         dataCells.debtorInfo(cell, indexPath, debtors)
         customizeСells.settingsDebtorsCell(cell, .green)
-        customizeСells.fontSettingsCell(cell, view: view)
+        //customizeСells.fontSettingsCell(cell, view: view)
+        customizeСells.fontSettingsCell(cell, screenSize: CGFloat(screenSize.height))
         return cell
     }
     
@@ -67,6 +73,22 @@ class DebtorsList: UITableViewController {
         guard editingStyle == UITableViewCell.EditingStyle.delete else { return }
         let debtors = dataManager.debtorsArray[indexPath.row]
         dataManager.deleteFromRealm(debtor: debtors, tableView: tableView)
+    }
+    
+    
+    // Edit cell
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let debtors = dataManager.debtorsArray[indexPath.row]
+        let edidDataScreen = EdidDataScreen()
+        edidDataScreen.editDataDelegate = self
+        let navCon = UINavigationController(rootViewController: edidDataScreen)
+        edidDataScreen.currency = debtors.currency
+        edidDataScreen.sumLabel.text = "\(debtors.sum) \(debtors.currency)"
+        edidDataScreen.sum = debtors.sum
+        edidDataScreen.name = debtors.name
+        edidDataScreen.indexOfItem = indexPath.row
+        present(navCon, animated: true)
+        print(" name: \(debtors.name) \n sum: \(debtors.sum) \n currency: \(debtors.currency)")
     }
     
     

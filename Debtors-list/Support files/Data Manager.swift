@@ -37,10 +37,10 @@ class DataManager {
     }
     
     
-    func deleteFromRealm(debtor: Debtors, tableView: UITableView){
+    func deleteFromRealm(debtor: Debtors, tableView: UITableView?){
         try! realm.write{
             realm.delete(debtor)
-            tableView.reloadData()
+            tableView?.reloadData()
         }
     }
 }

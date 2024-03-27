@@ -12,13 +12,13 @@ import UserNotifications
 
 class MainScreen: UIViewController {
     
-    var networkManager = NetworkManager()
+    //   var customizeСells = CustomizeСells()
+     //  var dataCells = DataCells()
+       //  var sortedArray = [Debtor]()
+   // var networkManager = NetworkManager()
     var currency = Currency2()
-    var customizeСells = CustomizeСells()
-    var dataCells = DataCells()
     var dataManager = DataManager()
     var array = [Debtor]()
-    var sortedArray = [Debtor]()
     var setColors = SetColors()
     let notifications = Notifications()
     
@@ -46,12 +46,13 @@ class MainScreen: UIViewController {
     lazy var youDebtStackView = StackViewBuilder(space: 3, type: .center, axisType: .vertical, fillType: .fill)
     
     
-    let mainTableView: UITableView = {
-        let tv = UITableView()
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        return tv
-    }()
+//    let mainTableView: UITableView = {
+//        let tv = UITableView()
+//        tv.translatesAutoresizingMaskIntoConstraints = false
+//        return tv
+//    }()
     
+    let mainTableView = MainTableView()
     
     lazy var infoView: UIView = {
         let infoView = UIView()
@@ -61,12 +62,19 @@ class MainScreen: UIViewController {
     }()
     
     
+    lazy var blurView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    
     //MARK: - View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         setupRealm()
-        tableViewSettings()
+     //   tableViewSettings()
         setConstraints()
         fontSettings()
         setupStackView()
@@ -110,7 +118,7 @@ class MainScreen: UIViewController {
         let sortArray = array.sorted { firstArray, secondArray in
             firstArray.date > secondArray.date
         }
-        sortedArray = sortArray
+        mainTableView.sortedArray = sortArray
     }
     
     
@@ -131,21 +139,18 @@ class MainScreen: UIViewController {
     }
     
     
-    private func tableViewSettings() {
-        mainTableView.register(DebtorCell.self, forCellReuseIdentifier: "TableViewCell")
-        mainTableView.layer.cornerRadius = 15
-        mainTableView.delegate = self
-        mainTableView.dataSource = self
-    }
+//    private func tableViewSettings() {
+////        mainTableView.register(DebtorCell.self, forCellReuseIdentifier: "TableViewCell")
+////        mainTableView.layer.cornerRadius = 15
+//        //mainTableView.delegate = self
+//       // mainTableView.dataSource = self
+//    }
     
     
-    lazy var blurView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+  
     
     
+    // треба перенести
     func authenticate() {
         guard MainScreen.faceTouchId else { return }
         self.blurView.alpha = 1

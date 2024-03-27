@@ -14,6 +14,7 @@
 		18A74BC729672D12001A2E7E /* NewDebtTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A74BC629672D12001A2E7E /* NewDebtTableView.swift */; };
 		18A74BC929672E4E001A2E7E /* AddNewDebtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A74BC829672E4E001A2E7E /* AddNewDebtLayout.swift */; };
 		18AF2EA629526E1300CB2388 /* CustomizeShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF2EA529526E1200CB2388 /* CustomizeShadows.swift */; };
+		18B4E4DF2BA5A53900D76444 /* EditDataScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E4DE2BA5A53900D76444 /* EditDataScreen.swift */; };
 		18BA7E1429658B82006408A0 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA7E1329658B82006408A0 /* SettingsTableView.swift */; };
 		18CBF6A4293E6FB100D4DC26 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6A3293E6FB100D4DC26 /* TabBar.swift */; };
 		18CBF6A6293E6FE700D4DC26 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6A5293E6FE700D4DC26 /* MainScreen.swift */; };
@@ -32,7 +33,7 @@
 		18CBF6C1293E71DF00D4DC26 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF6C0293E71DF00D4DC26 /* Currency.swift */; };
 		18DCECFF29433C120092E30B /* LabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DCECFE29433C120092E30B /* LabelBuilder.swift */; };
 		18E2026F29688AC100ED17BD /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E2026E29688AC100ED17BD /* CurrencyModel.swift */; };
-		18F926342941E8A700DF0CBE /* MainScreenLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F926332941E8A700DF0CBE /* MainScreenLayout.swift */; };
+		18F926342941E8A700DF0CBE /* MainScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F926332941E8A700DF0CBE /* MainScreenExtension.swift */; };
 		445C59EFF14BE9C56C74CFDE /* Pods_Debtors_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8075E9F3AB34BDA886A15 /* Pods_Debtors_list.framework */; };
 		F58DA02A27E4A92E00D7739B /* Data Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58DA02927E4A92E00D7739B /* Data Manager.swift */; };
 		F5E45C9427E49F2300C75FA0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E45C9327E49F2300C75FA0 /* Model.swift */; };
@@ -72,6 +73,7 @@
 		18A74BC629672D12001A2E7E /* NewDebtTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDebtTableView.swift; sourceTree = "<group>"; };
 		18A74BC829672E4E001A2E7E /* AddNewDebtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDebtLayout.swift; sourceTree = "<group>"; };
 		18AF2EA529526E1200CB2388 /* CustomizeShadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeShadows.swift; sourceTree = "<group>"; };
+		18B4E4DE2BA5A53900D76444 /* EditDataScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataScreen.swift; sourceTree = "<group>"; };
 		18BA7E1329658B82006408A0 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
 		18CBF6A3293E6FB100D4DC26 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		18CBF6A5293E6FE700D4DC26 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		18CBF6C0293E71DF00D4DC26 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		18DCECFE29433C120092E30B /* LabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBuilder.swift; sourceTree = "<group>"; };
 		18E2026E29688AC100ED17BD /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
-		18F926332941E8A700DF0CBE /* MainScreenLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenLayout.swift; sourceTree = "<group>"; };
+		18F926332941E8A700DF0CBE /* MainScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenExtension.swift; sourceTree = "<group>"; };
 		9CF8075E9F3AB34BDA886A15 /* Pods_Debtors_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Debtors_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED15456EA1FCCE10B8F1C38 /* Pods-Debtors-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debtors-list.release.xcconfig"; path = "Target Support Files/Pods-Debtors-list/Pods-Debtors-list.release.xcconfig"; sourceTree = "<group>"; };
 		F58DA02927E4A92E00D7739B /* Data Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Manager.swift"; sourceTree = "<group>"; };
@@ -218,13 +220,12 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F58DA02B27E4D47F00D7739B /* Model */ = {
+		F58DA02B27E4D47F00D7739B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				18CBF6B3293E70F100D4DC26 /* DebtorCell.swift */,
-				18CBF6B5293E710A00D4DC26 /* SettingsCell.swift */,
 			);
-			path = Model;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F5E45C8C27E49CC700C75FA0 /* MainScreen */ = {
@@ -232,7 +233,7 @@
 			children = (
 				18CBF6A5293E6FE700D4DC26 /* MainScreen.swift */,
 				18CBF6A7293E701100D4DC26 /* MainTableView.swift */,
-				18F926332941E8A700DF0CBE /* MainScreenLayout.swift */,
+				18F926332941E8A700DF0CBE /* MainScreenExtension.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -241,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				18CBF6B7293E713E00D4DC26 /* Settings.swift */,
+				18CBF6B5293E710A00D4DC26 /* SettingsCell.swift */,
 				18BA7E1329658B82006408A0 /* SettingsTableView.swift */,
 			);
 			path = "Settings screan";
@@ -305,7 +307,7 @@
 				18E428A2293F655300DA70B5 /* SystemFiles */,
 				18CBF6A2293E6F7F00D4DC26 /* TabBar */,
 				F5E45C8C27E49CC700C75FA0 /* MainScreen */,
-				F58DA02B27E4D47F00D7739B /* Model */,
+				F58DA02B27E4D47F00D7739B /* Cell */,
 				F5E45C8F27E49D5200C75FA0 /* DebtScreen  */,
 				F5E45C8E27E49D1C00C75FA0 /* DebtorsScreen */,
 				F5E45C8D27E49CE900C75FA0 /* Settings screan */,
@@ -318,6 +320,7 @@
 				F5F5237D27E3A28800FAF539 /* Assets.xcassets */,
 				F5F5237F27E3A28800FAF539 /* LaunchScreen.storyboard */,
 				F5F5238227E3A28800FAF539 /* Info.plist */,
+				18B4E4DE2BA5A53900D76444 /* EditDataScreen.swift */,
 			);
 			path = "Debtors-list";
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				F5F5236E27E3A28600FAF539 /* Frameworks */,
 				F5F5236F27E3A28600FAF539 /* Resources */,
 				6CC7CCE244C62BA164A02765 /* [CP] Embed Pods Frameworks */,
+				A95B9C7B1A19C12786538291 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -507,6 +511,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A95B9C7B1A19C12786538291 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Debtors-list/Pods-Debtors-list-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Debtors-list/Pods-Debtors-list-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Debtors-list/Pods-Debtors-list-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -526,9 +547,10 @@
 				18CBF6BA293E716200D4DC26 /* DebtorsList.swift in Sources */,
 				18A74BC729672D12001A2E7E /* NewDebtTableView.swift in Sources */,
 				18CBF6A6293E6FE700D4DC26 /* MainScreen.swift in Sources */,
-				18F926342941E8A700DF0CBE /* MainScreenLayout.swift in Sources */,
+				18F926342941E8A700DF0CBE /* MainScreenExtension.swift in Sources */,
 				18CBF6B0293E707800D4DC26 /* DarkTheme.swift in Sources */,
 				18944A0F2967A67D0052A024 /* NetworkManager.swift in Sources */,
+				18B4E4DF2BA5A53900D76444 /* EditDataScreen.swift in Sources */,
 				18CBF6AC293E706000D4DC26 /* DataCells.swift in Sources */,
 				18CBF6AA293E705400D4DC26 /* CustomizeСells.swift in Sources */,
 				18CBF6BC293E718800D4DC26 /* DebtList.swift in Sources */,
