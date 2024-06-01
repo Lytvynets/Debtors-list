@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class NotificationsSettings: UIViewController {
+class NotificationsSettingsViewController: UIViewController {
     
     var not = Notifications()
     var setColors = SetColors()

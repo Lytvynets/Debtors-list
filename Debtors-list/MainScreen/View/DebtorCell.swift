@@ -10,7 +10,9 @@ import UIKit
 
 class DebtorCell: UITableViewCell {
     
-    var customizeShadows = CustomizeShadows()
+    let screenSize: CGRect = UIScreen.main.bounds
+  //  var customizeShadows = CustomizeShadows()
+    var givenDebt = true
     
     lazy var numberOfRowLabel = LabelBuilder(fontSize: 15, startText: "", color: nil)
     lazy var firstNameLabel = LabelBuilder(fontSize: 15, startText: "", color: nil)
@@ -18,6 +20,7 @@ class DebtorCell: UITableViewCell {
     lazy var sumOfDebtLabel = LabelBuilder(fontSize: 15, startText: "0", color: nil)
     lazy var dateLabel = LabelBuilder(fontSize: 15, startText: "", color: nil)
     lazy var currencyLabel = LabelBuilder(fontSize: 15, startText: "USD", color: nil)
+    
     //Stack views
     lazy var debtorsUserInfoStackView = StackViewBuilder(space: 0.5, type: .leading, axisType: .vertical, fillType: .fill)
     lazy var debtorsInfoStackView = StackViewBuilder(space: 0.5, type: .trailing, axisType: .vertical, fillType: .fill)
@@ -42,19 +45,7 @@ class DebtorCell: UITableViewCell {
         debtorsSumInfoStackView.addArrangedSubview(currencyLabel)
         debtorsInfoStackView.addArrangedSubview(debtorsSumInfoStackView)
         debtorsInfoStackView.addArrangedSubview(dateLabel)
-      //  shadows()
         setConstraints()
-        fontSettings()
-    }
-    
-    
-    func fontSettings() {
-        numberOfRowLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-        firstNameLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-        secondNameLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-        sumOfDebtLabel.font = UIFont(name: "Noteworthy Light", size: 17)
-        dateLabel.font = UIFont(name: "Noteworthy Light", size: 15)
-        currencyLabel.font = UIFont(name: "Noteworthy Light", size: 17)
     }
     
     
@@ -66,18 +57,9 @@ class DebtorCell: UITableViewCell {
             debtorsUserInfoStackView.leadingAnchor.constraint(equalTo: numberOfRowLabel.trailingAnchor, constant: 10),
             debtorsInfoStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             debtorsInfoStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -25)
-            
         ])
     }
     
-    func shadows() {
-        customizeShadows.makeShadowForAll(object: [numberOfRowLabel, firstNameLabel, secondNameLabel, sumOfDebtLabel, dateLabel, currencyLabel ],
-                                          borderWidth: nil,
-                                          borderColor: nil,
-                                          shadowColor: UIColor.black.cgColor,
-                                          shadowRadius: 3,
-                                          Opacity: 0.05)
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

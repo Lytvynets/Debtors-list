@@ -1,5 +1,5 @@
 //
-//  EditDataScreen.swift
+//  EdidDataViewController.swift
 //  Debtors-list
 //
 //  Created by Vlad Lytvynets on 16.03.2024.
@@ -9,22 +9,21 @@ import Foundation
 import UIKit
 import RealmSwift
 
-protocol EditDataDelegate {
-    func reloadTableView()
-}
-
-class EdidDataScreen: UIViewController, UITextFieldDelegate {
+class EditDataViewController: UIViewController, UITextFieldDelegate {
     
     var sum = 0.0
     var name = ""
+    var lastName = ""
     var currency = ""
     var indexOfItem = 0
     var newSum = 0.0
+    var typeOfDebr = true
     
+    let screenSize: CGRect = UIScreen.main.bounds
     var dataManager = DataManager()
     var setColors = SetColors()
-    var newDebt = Debtors(name: "", lastName: "", sum: 0, currency: "", date: "")
     var editDataDelegate: EditDataDelegate?
+    
     
     lazy var plusMinusLabel = LabelBuilder(fontSize: 25, startText: "+", color: SetColors.currentColor.labelsColor)
     lazy var sumLabel = LabelBuilder(fontSize: 25, startText: "000", color: SetColors.currentColor.labelsColor)
@@ -58,12 +57,19 @@ class EdidDataScreen: UIViewController, UITextFieldDelegate {
         navigationItem.title = name
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItem?.isEnabled = false
         setColors.navigationControllerColorSettings(self)
         setConstraints()
-        
+        fontSettings()
         let realm = try! Realm()
-        dataManager.debtorsArray = realm.objects(Debtors.self)
-        
+        dataManager.debtorsArray = realm.objects(Debtor.self)
+    }
+    
+    
+    func fontSettings() {
+        plusMinusLabel.font = UIFont(name: "Noteworthy Bold", size: screenSize.height * 0.023)
+        sumLabel.font = UIFont(name: "Noteworthy Bold", size: screenSize.height * 0.023)
+        sumTextField.font = UIFont(name: "Noteworthy Bold", size: screenSize.height * 0.023)
     }
     
     
@@ -89,6 +95,7 @@ class EdidDataScreen: UIViewController, UITextFieldDelegate {
     
     //MARK: - UITextFieldDelegate
     func textFieldDidChangeSelection(_ textField: UITextField) {
+        saveButtonEnableTracker(textField)
         if let newSum = Double(textField.text ?? "") {
             if plusMinusLabel.text == "+" {
                 let result = sum + newSum
@@ -105,13 +112,20 @@ class EdidDataScreen: UIViewController, UITextFieldDelegate {
     }
     
     
+    func saveButtonEnableTracker(_ textField: UITextField) {
+        if textField.text == "" {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        }else{
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+    }
+    
+    
     //MARK: - Actions
     @objc func addTapped() {
         let name = name
-        let lastName = ""
-        let sum = Double("\(String(describing: sumLabel.text))")
+        let lastName = lastName
         let yourDebtCurrency = currency
-        
         let now = Date()
         let dateFormater = DateFormatter()
         dateFormater.dateStyle = .medium
@@ -120,9 +134,18 @@ class EdidDataScreen: UIViewController, UITextFieldDelegate {
         let debtors = self.dataManager.debtorsArray[self.indexOfItem]
         self.dataManager.deleteFromRealm(debtor: debtors, tableView: nil)
         
+        let debtor = DebtorBuilder()
+            .setName(name)
+            .setLastName(lastName)
+            .setSum(Double(self.newSum))
+            .setCurrency(yourDebtCurrency)
+            .setDate(dateTime)
+            .setTypeOfDebt(typeOfDebr)
+            .buildDebtor()
+        
+        self.dataManager.saveToRealm3(debtor: debtor)
+        
         DispatchQueue.main.async {
-            self.newDebt = Debtors(name: name, lastName: lastName, sum: self.newSum, currency: yourDebtCurrency, date: dateTime)
-            self.dataManager.saveToRealm(debtor: self.newDebt)
             self.editDataDelegate?.reloadTableView()
         }
         

@@ -8,23 +8,9 @@
 import Foundation
 import UIKit
 
-protocol ColorDelegate {
-    var labelsColor: UIColor { get }
-    var backgroundColor: UIColor { get }
-    var backgroundCellColor: UIColor { get }
-    var backgroundCustomViewColor: UIColor { get }
-    var buttonsColor: UIColor { get }
-    var backgroundTabBar: UIColor { get }
-    var textFieldBackgroundColor: UIColor { get }
-    var infoViewColor: UIColor { get }
-    var infoViewLabelColor: UIColor { get }
-    var placeholderTextColor: UIColor { get }
-    
-}
-
 
 class SetColors {
-    static var currentColor: ColorDelegate = LightTheme()
+    static var currentColor: ColorModel = LightTheme()
     
     func navigationControllerColorSettings(_ viewController: UIViewController) {
         viewController.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: SetColors.currentColor.labelsColor]

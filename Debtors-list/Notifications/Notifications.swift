@@ -11,7 +11,7 @@ import RealmSwift
 
 class Notifications: NSObject, UNUserNotificationCenterDelegate {
     
-    var currency = Currency2()
+    var currency = Currency()
     let notificationsCenter = UNUserNotificationCenter.current()
     var notificationCenter = NotificationCenter.default
     var badge: NSNumber = 0
@@ -19,17 +19,20 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
     var debt = ""
     var debtors = ""
     
+    
     static var hours = 0 {
         didSet {
             UserDefaults.standard.set(hours, forKey: "Hours")
         }
     }
     
+    
     static var minutes = 0 {
         didSet {
             UserDefaults.standard.set(minutes, forKey: "Minutes")
         }
     }
+    
     
     static var weekDay = 0 {
         didSet {
@@ -44,7 +47,7 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         var debtorsSum: Double = 0.0
         
         currency.convertCurrency(&debtSum, &debtorsSum)
-        if MainScreen.roundResult == false {
+        if MainViewController.roundResult == false {
             self.debt = "-\((NSString(format:"%.2f", debtSum)))$"
             self.debtors = "\((NSString(format:"%.2f", debtorsSum)))$"
         } else {

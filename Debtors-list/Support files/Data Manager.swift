@@ -11,33 +11,17 @@ import RealmSwift
 class DataManager {
     
     var realm = try! Realm()
-    var youDebtArray: Results<YourDebtModel>!
-    var debtorsArray: Results<Debtors>!
+    var debtorsArray: Results<Debtor>!
     
     
-    func deleteYouDebtFromRealm(debtor: YourDebtModel, tableView: UITableView){
-        try! realm.write{
-            realm.delete(debtor)
-            tableView.reloadData()
-        }
-    }
-    
-    
-    func saveToRealm(debtor: Debtors){
+    func saveToRealm3(debtor: Debtor){
         try! realm.write{
             realm.add(debtor)
         }
     }
     
     
-    func saveToRealm2(debtor: YourDebtModel){
-        try! realm.write{
-            realm.add(debtor)
-        }
-    }
-    
-    
-    func deleteFromRealm(debtor: Debtors, tableView: UITableView?){
+    func deleteFromRealm(debtor: Debtor, tableView: UITableView?){
         try! realm.write{
             realm.delete(debtor)
             tableView?.reloadData()

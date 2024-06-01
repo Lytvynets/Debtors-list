@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LightTheme: ColorDelegate {
+class LightTheme: ColorModel {
     var placeholderTextColor: UIColor = .lightGray
     var textFieldBackgroundColor: UIColor = #colorLiteral(red: 0.9341474771, green: 0.9342468381, blue: 0.9373220801, alpha: 1)
     var backgroundTabBar: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
